@@ -1,0 +1,7 @@
+This is Text files 
+ mango 
+ Banana 
+ Apple 
+ Orange 
+ Melon 
+ Lemon
