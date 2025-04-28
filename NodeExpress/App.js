@@ -22,6 +22,10 @@ app.get("/show",(req,res)=>{          //base path "/"
     res.send("This is the show page")
     
 })
+app.use((req,res)=>{          //base path "/"
+    res.status(404).send("<h3 style='color':red>This is page not found")
+    
+})
 
 app.listen(3000,()=>{
     console.log("Server is running on port 3000")
