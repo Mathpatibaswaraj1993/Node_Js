@@ -31,8 +31,8 @@ app.get("/form",(req,res)=>{
 })
 app.post("/form",(req,res)=>{         
     console.log(" This is post request")
-    console.log(req.body) // to get the data from the request body
-
+    // console.log(req.body) // to get the data from the request body
+    
 
     res.send("Hello from the express server")
     
