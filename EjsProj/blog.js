@@ -55,8 +55,23 @@ app.get("/add", (req, res) => {
     res.render('pages/addarticles', { user })
 })
 
+let newarticle = []
+
+
 app.get("/articles", (req, res) => {
-    res.render('pages/articles', { articles })
+    newarticle=articles
+    res.render('pages/articles', { newarticle })
+})
+app.post("/articles", (req, res) => {
+    const artname = req.body.artname
+    articles.forEach((e) => {
+        if (artname === e.title)
+        {
+            newarticle.push(e)
+        }
+    })
+    res.render('pages/articles', { newarticle })
+    
 })
 
 app.post('/addarticles', (req, res) => {
@@ -64,6 +79,8 @@ app.post('/addarticles', (req, res) => {
     articles.push(req.body)
     res.redirect("/articles")
 })
+
+
 
 app.listen(3000, () => {
     console.log("Server starting....!!!");

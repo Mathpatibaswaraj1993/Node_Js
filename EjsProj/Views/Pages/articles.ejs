@@ -2,8 +2,12 @@
     <main class="container py-5 text-center">
 
         <p class="text-danger">Welcome to my Articles Page...</p>
+        <form action="/articles" method="post">
+            <input type="text" name="artname" placeholder="Search..." />
+            <button type="submit">Search</button>
+        </form>
         <ul>
-            <% articles.forEach((e)=>{%>
+            <% newarticle.forEach((e)=>{%>
                 <li>
                     <h2>
                         <%=e.title %>
@@ -15,10 +19,5 @@
                 <% })%>
         </ul>
     </main>
-    <div class="container mt-3">
-        <form class="form-inline justify-content-center">
-            <input class="form-control mr-sm-2 w-50" type="search" placeholder="Search articles..." aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </div>
+
     <%- include('../partials/footer.ejs') %>
