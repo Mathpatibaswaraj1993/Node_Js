@@ -1,0 +1,34 @@
+<%- include('../partials/header.ejs') %>
+    <main class="container py-5 text-center">
+
+        <p class="text-danger">Welcome to my Add Articles Blog Page...</p>
+
+        <div class="container mt-5">
+            <h3 class="mb-4">Article Form</h3>
+            <form action="/addarticles" method="post">
+                <!-- ID -->
+                <div class="form-group">
+                    <label for="articleId">ID</label>
+                    <input type="number" class="form-control" id="articleId" placeholder="Enter article ID" name="id">
+                </div>
+
+                <!-- Title -->
+                <div class="form-group">
+                    <label for="articleTitle">Title</label>
+                    <input type="text" class="form-control" id="articleTitle" placeholder="Enter article title"
+                        name="title">
+                </div>
+
+                <!-- Description -->
+                <div class=" form-group">
+                    <label for="articleDescription">Description</label>
+                    <textarea class="form-control" id="articleDescription" rows="4"
+                        placeholder="Enter article description" name="description"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </main>
+    <%- include('../partials/footer.ejs') %>
