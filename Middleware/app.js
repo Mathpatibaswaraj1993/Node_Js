@@ -39,6 +39,10 @@ app.get("/third", (req, res) => {
 router.get("/about", (req, res) => {
     res.send("About Page")
 })
+router.get("/help", (req, res) => {
+    res.send("Help Page")
+})
+
 app.use("/", router)
 
 
