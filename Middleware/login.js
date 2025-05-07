@@ -4,7 +4,7 @@ const router = express.Router()
 
 app.use(express.urlencoded({ extended: true }))
 
-
+//custom created middleware
 const reqFilter = (req, res, next) => {
     const u = req.body.uname
     const p = req.body.pass
