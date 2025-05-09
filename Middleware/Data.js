@@ -7,7 +7,7 @@ app.set('view engine', 'ejs')
 app.get("", (req, res) => {
     res.render("Data",{'msg':""})
 })
-app.post("/processForm", (req, res) => {
+app.post("/submit", (req, res) => {
     res.render("Data", { 'msg': "Data Added Successfully !!!" })
     
 })
