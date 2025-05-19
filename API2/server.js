@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 const productroute = require('./Routes/ProductRoutes')
-
+require('./config.js')
 // app.get("", (req, res) => {
 //     res.send("Welcome to Home Page")
 // })
@@ -12,10 +12,10 @@ const productroute = require('./Routes/ProductRoutes')
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 app.use('/', productroute)
-mongoose.connect('mongodb+srv://mathpatibaswaraj:Apple2025@cluster0.7kw4iux.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0').then(() => {
-    console.log("Connected....!!");
+// mongoose.connect('mongodb+srv://mathpatibaswaraj:Apple2025@cluster0.7kw4iux.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0').then(() => {
+//     console.log("Connected....!!");
 
-})
+// })
 
 
 app.listen(3000, () => {

@@ -1,0 +1,14 @@
+project-root/
+│
+├── controllers/
+│   └── userController.js
+│
+├── models/
+│   └── userModel.js
+│
+├── routes/
+│   └── userRoutes.js
+│
+├── app.js
+└── config/
+    └── db.js
